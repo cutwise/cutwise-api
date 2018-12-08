@@ -6,7 +6,7 @@
 ## Maintained changelogs:
 - [API Changelog](rest/changelog.md)
 
----
+## Links
 [Cutwise.com](https://cutwise.com)
 
 [Pricing](https://cutwise.com/pricing/)
