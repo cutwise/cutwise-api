@@ -4,6 +4,11 @@
 
 ## Error Handling
 
+## Working with Constants
+- [Constants API](rest/constants-api.md)
+
+## Diamond API
+
 ## Examples
 
 ## Supported Public APIs
