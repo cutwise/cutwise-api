@@ -1,5 +1,11 @@
 # Cutwise Platform API (public)
 
+## Authentication
+
+## Error Handling
+
+## Examples
+
 ## Supported Public APIs
 - [Media Meta API](rest/media-meta.md)
 
