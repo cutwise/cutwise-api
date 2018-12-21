@@ -3,12 +3,14 @@
 ## Authentication
 Cutwuse requires users of the API to be authenticated before they can query most data.
 
-## Error Handling
-
 ## Working with Constants
 - [Constants API](rest/constants-api.md)
 
 ## Diamond API
+
+## Metrics
+
+## Common Error Handling
 
 ## Examples
 
