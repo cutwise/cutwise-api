@@ -4,7 +4,7 @@
 Constants API provides basic data to make subsequent requests.
 
 ```json
-https://testing.cutwise.com/api/v2/constants
+https://api.cutwise.com/v2/constants
 ```
 
 It returns JSON object like this:
