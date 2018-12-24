@@ -2,11 +2,11 @@
 
 ## Overview
 
-Described below scores scale format is actual for еру following Cutwise Scores: Fire, Brilliance, Cut Performance.
+Scores scale format described below is actual for the following Cutwise Scores: _Fire_, _Brilliance_, _Cut Performance_.
 
-List of attributes used in scale:
+List of used attributes:
 
-- `score.val` — absolute score value (is not standardized to mass or area);
+- `score.val` — absolute score value (is not normalized  to mass or area);
 - `score.rg` — relative grade value (normalized by Round cut with the same projection area);
 - `score.d` — calculation error (dispersion).
 
@@ -14,7 +14,7 @@ The position and width of the **Score Scale Marker** on the scale is defined by 
 
 The entire space in the boundaries is painted with a more saturated gradient background. This area is called **Score Scale Marker**.
 
-Absolute scores are showing unchanged.
+Absolute scores are showed as is.
 
 ![Fig.1](img/scores-scale.png)
 
@@ -25,17 +25,17 @@ x1 = score.rg - score.d;
 x2 = score.rg + score.d;
 ```
 
-The positions of both `x1` and `x2` point are interpolates separately on definite scale segment that each point is fitted to. Both bounds can fit into one segment.
+The positions of both `x1` and `x2` points are interpolated separately on definite scale segment that each point is fitted to. Both bounds can fit into one segment.
 
 ## Score Scale Segments
 
-The list of segment boundaries is defiend in the [Constants API](constants-api.md)
+The list of segment boundaries is defined in the [Constants API](constants-api.md)
 
 ![Fig.1](img/score-boundaries.png)
 
-⚠️ Poor grade lower bound is always 0.
+⚠️ Lower poor grade bound is always 0.
 
-⚠️ Actually there is no upper limit for OU (grade Outstanding), the last scale value in the API (for example, 1.3 for Fire) is used just for the convenient normalization on the OU grade (so as not to normalize between 1 and infinity). If the grade value is greater than the upper segment, then we assume it to be equal to the OU segment boundary.
+⚠️ Actually there is no upper limit for OU (grade Outstanding), the last scale value in the API (for example, 1.3 for Fire) is used just for the convenient normalization to the OU grade (so as not to normalize between 1 and infinity). If the grade value is greater than the upper segment, then we assume it to be equal to the OU segment boundary.
 
 ## Example for Fire Score
 
@@ -62,7 +62,7 @@ Fluorescence Scores values appears as a histogram values:
 
 The values lie in the range `[0;1]`, where 1 is the maximum value (100%).
 
-Fluorescence Score depicted as a vertical bar chart:
+Fluorescence Score can be depicted as a vertical bar chart:
 
 ![Fig.1](img/score-fluor-2.png)
 
