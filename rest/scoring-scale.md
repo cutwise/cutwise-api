@@ -33,9 +33,9 @@ The list of segment boundaries is defiend in the [Constants API](constants-api.m
 
 ![Fig.1](img/score-boundaries.png)
 
-:warning: Poor grade lower bound is always 0.
+⚠️ Poor grade lower bound is always 0.
 
-:warning: Actually there is no upper limit for OU (grade Outstanding), the last scale value in the API (for example, 1.3 for Fire) is used just for the convenient normalization on the OU grade (so as not to normalize between 1 and infinity). If the grade value is greater than the upper segment, then we assume it to be equal to the OU segment boundary.
+⚠️ Actually there is no upper limit for OU (grade Outstanding), the last scale value in the API (for example, 1.3 for Fire) is used just for the convenient normalization on the OU grade (so as not to normalize between 1 and infinity). If the grade value is greater than the upper segment, then we assume it to be equal to the OU segment boundary.
 
 ## Example for Fire Score
 
@@ -52,7 +52,7 @@ x2 = 0.78
 
 On the graphical representation of the scale, the grade marker should be 20% on the right side of the G segment (grade Good) and 53% from on the left side of the VG segment (grade Very Good).
 
-:warning: For positioning the Symmetry Score marker, the same scheme is used but instead of relative grade (`*.rg`) the absolute value (`* .val`) is used.
+⚠️ For positioning the Symmetry Score marker, the same scheme is used but instead of relative grade (`*.rg`) the absolute value (`* .val`) is used.
 
 ## Fluorescence Scores
 
