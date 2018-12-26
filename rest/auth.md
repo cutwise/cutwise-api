@@ -63,4 +63,5 @@ Authorization: Bearer YzU5NDczNTMwMDY2YWY1ZjM5YmViNGJlMTU2ZmI2YjZmNjJjYjE0Y2Y5Mm
 ## Handling Errors
 
 In case when Cutwise API returns 401 (Unauthorized) HTTP response code, access token with sufficient rights should be provided with request. Client should fetch Access Token from Cutwise OAuth server and provide in as Bearer Authorization header.
+
 If Cutwise API returns 403 (Access Denied) HTTP response code, then provided Cutwise Access Token has no rights to access or modify requested REST resource.
