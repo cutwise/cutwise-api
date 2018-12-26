@@ -328,7 +328,7 @@ On success list of diamond objects will be returned.
 
 Up to 500 entries can be sent in single request.
 
-## Single Diamond Deleting
+## Single Diamond Deletion
 
 ```http
 DELETE /v3/diamond/{PRODUCT_ID} HTTP/1.1
@@ -336,7 +336,7 @@ Host: api.cutwise.com
 Authorization: Bearer {CUTWISE_ACCESS_TOKEN}
 ```
 
-## Bulk Diamond Deleting
+## Bulk Diamond Deletion
 
 ```http
 DELETE /v3/diamond/bulk HTTP/1.1
