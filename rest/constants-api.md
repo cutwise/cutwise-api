@@ -234,7 +234,7 @@ Let's assume root Constants API result object called `res`.
 - `res.dict.fancyGrade` - color grades for fancy-coloured diamonds;
 - `res.dict.colorHue` - tree view of colour structure of fancy-coloured diamonds;
 - `res.dict.colorModifier` - colour modifier flat list;
-- `res.scoring` - Cutwise Optical Scores technical constants (see [Cutwise Scores Scale doc](scoring-scale.md) for details);
+- `res.scoring` - Cutwise Optical Performance Scores technical constants (see [Cutwise Scores Scale doc](scoring-scale.md) for details);
 
 ## Constants Caching
 
