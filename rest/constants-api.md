@@ -1,10 +1,16 @@
 
 # Working with Constants
 
-Constants API provides basic data to make subsequent requests.
+## Overview
 
-```json
-https://api.cutwise.com/v2/constants
+The Constants API provides structured JSON-objects with Cutwise dictionaries and Cutwise scoring definitions.
+
+## Requesting Constants
+
+Cutwise Constants data can be fetched by simple unauthorized HTTP GET request:
+
+```http
+GET https://api.cutwise.com/v2/constants
 ```
 
 It returns JSON object like this:
@@ -22,86 +28,20 @@ It returns JSON object like this:
         "id": 4,
         "title": "Princess"
       },
-      {
-        "id": 9,
-        "title": "Cushion"
-      },
-      {
-        "id": 11,
-        "title": "Oval"
-      },
-      {
-        "id": 80,
-        "title": "Marquise"
-      },
-      {
-        "id": 22,
-        "title": "Pear"
-      },
-      {
-        "id": 83,
-        "title": "Radiant"
-      },
-      {
-        "id": 90,
-        "title": "Emerald"
-      },
-      {
-        "id": 92,
-        "title": "Asscher"
-      },
-      {
-        "id": 85,
-        "title": "Heart"
-      },
-      {
-        "id": 113,
-        "title": "Other"
-      }
+      ...
     ],
     "color": [
       {
         "id": 15,
         "title": "D",
-        "extTitle": "D",
+        "short": "D",
         "position": 10
       },
       {
         "id": 16,
         "title": "E",
-        "extTitle": "E",
+        "short": "E",
         "position": 20
-      },
-      ...
-    ],
-    "fancyGrade": [
-      {
-        "id": 22,
-        "title": "Black",
-        "extTitle": "Bk",
-        "position": 90,
-        "children": []
-      },
-      {
-        "id": 23,
-        "title": "Gray",
-        "extTitle": "Gr",
-        "position": 100,
-        "children": {
-          "24": {
-            "id": 24,
-            "title": "White",
-            "extTitle": "W",
-            "position": 116
-          },
-          "56": {
-            "id": 56,
-            "title": "Yellow-Gray",
-            "extTitle": "YGr",
-            "position": 111
-          },
-          ...
-        }
       },
       ...
     ],
@@ -109,135 +49,151 @@ It returns JSON object like this:
       {
         "id": 1,
         "title": "FL",
-        "extTitle": "FL",
+        "short": "FL",
         "position": 10
       },
       {
         "id": 2,
         "title": "IF",
-        "extTitle": "IF",
+        "short": "IF",
         "position": 20
       },
       ...
     ],
     "cutQuality": [
       {
-        "id": 10,
-        "title": "Ideal",
-        "extTitle": "ID",
-        "position": 5
-      },
-      {
         "id": 1,
         "title": "Excellent",
-        "extTitle": "EX",
+        "short": "EX",
         "position": 10
+      },
+      {
+        "id": 2,
+        "title": "Very Good",
+        "short": "VG",
+        "position": 20
       },
       ...
     ],
     "polish": [
       {
-        "id": 10,
-        "title": "Ideal",
-        "extTitle": "ID",
-        "position": 5
-      },
-      {
         "id": 1,
         "title": "Excellent",
-        "extTitle": "EX",
+        "short": "EX",
         "position": 10
+      },
+      {
+        "id": 2,
+        "title": "Very Good",
+        "short": "VG",
+        "position": 20
       },
       ...
     ],
     "symmetry": [
       {
-        "id": 10,
-        "title": "Ideal",
-        "extTitle": "ID",
-        "position": 5
-      },
-      {
         "id": 1,
         "title": "Excellent",
-        "extTitle": "EX",
+        "short": "EX",
         "position": 10
       },
-      ...
-    ],
-    "laboratory": [
       {
-        "id": 3,
-        "title": "GIA"
-      },
-      {
-        "id": 4,
-        "title": "AGS"
+        "id": 2,
+        "title": "Very Good",
+        "short": "VG",
+        "position": 20
       },
       ...
     ],
-    "fluorescenceStrength": [
+    "fluorIntensity": [
       {
         "id": 1,
         "title": "None",
-        "extTitle": "NON",
+        "short": "NON",
         "position": 10
       },
       {
         "id": 2,
         "title": "Faint",
-        "extTitle": "FNT",
+        "short": "FNT",
         "position": 20
       },
       ...
     ],
-    "fluorescenceColor": [
+    "fluorColor": [
       {
         "id": 7,
         "title": "None",
-        "extTitle": "N",
+        "short": "N",
         "position": 0
       },
       {
         "id": 1,
         "title": "Blue",
-        "extTitle": "B",
+        "short": "B",
         "position": 10
       },
       ...
     ],
-    "girdleThicknessGrade": [
+    "fancyGrade": [
       {
-        "id": 1,
-        "title": "Extremely Thin",
-        "extTitle": "EXT THN",
+        "id": 8,
+        "title": "Faint",
+        "short": "Faint",
+        "abbreviation": "FT",
         "position": 10
       },
       {
-        "id": 2,
-        "title": "Very Thin",
-        "extTitle": "V THN",
+        "id": 9,
+        "title": "Very Light",
+        "short": "V.Light",
+        "abbreviation": "VL",
         "position": 20
       },
       ...
     ],
-    "culet": [
+    "colorHue": [
+      {
+        "id": 11,
+        "title": "Yellow",
+        "short": "Y",
+        "position": 10,
+        "children": [
+          {
+            "id": 30,
+            "title": "Green-Yellow",
+            "short": "GY",
+            "position": 8
+          },
+          ...
+        ]
+      },
+      {
+        "id": 20,
+        "title": "Red",
+        "short": "R",
+        "position": 40,
+        "children": []
+      },
+      ...
+    ],
+    "colorModifier": [
       {
         "id": 1,
-        "title": "None",
-        "extTitle": "N",
+        "title": "Brownish",
+        "short": "br",
         "position": 10
       },
       {
-        "id": 2,
-        "title": "Very small",
-        "extTitle": "V SML",
+        "id": 3,
+        "title": "Brown",
+        "short": "Br",
         "position": 20
       },
       ...
     ]
   },
-  "metrics": {
+  "scoring": {
     "fluorescence": {
       "ver": "5.4.2018-06-29-770653064"
     },
@@ -260,3 +216,32 @@ It returns JSON object like this:
   }
 }
 ```
+
+## Fields description
+
+Let's assume root Constants API result object called `res`.
+
+- `res.ver` - current Cutwise Platform API version (followed by [Semantic Versioning 2.0](https://semver.org/));
+- `res.dict` - list of Cutwise Dictionaries, see descriptions below;
+- `res.dict.cutShape` - list of top-level Cut Shapes. To fetch relative shapes please use CutShape API (`GET https://api.cutwise.com/v2/cutshapes` for list, `GET https://api.cutwise.com/v2/cutshapes/87` for detailed info);
+- `res.dict.color` - colour grades flat list for colorless diamonds;
+- `res.dict.clarity` - clarity grades flat list;
+- `res.dict.cutQuality` - cut quality grades flat list;
+- `res.dict.polish` - polish grades flat list;
+- `res.dict.symmetry` - symmetry grades flat list;
+- `res.dict.fluorIntensity` - fluorescence intensity grades flat list;
+- `res.dict.fluorColor` - fluorescence colours flat list;
+- `res.dict.fancyGrade` - color grades for fancy-coloured diamonds;
+- `res.dict.colorHue` - tree view of colour structure of fancy-coloured diamonds;
+- `res.dict.colorModifier` - colour modifier flat list;
+- `res.scoring` - Cutwise Optical Scores technical constants (see [Cutwise Scores Scale doc](scoring-scale.md) for details);
+
+## Constants Caching
+
+Constants data is recommended be cached on client side.
+The most simple cache invalidation condition is on Cutwise Platfrom version change (even patch-segment by semver).
+Current Cutwise Platform Version returns with each API request in response HTTP Header `X-App-Version`.
+
+## Roadmap
+
+- Support [If-Modified-Since](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Modified-Since) header for cache invalidation.
