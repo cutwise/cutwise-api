@@ -9,7 +9,7 @@ The Constants API provides structured JSON-objects with Cutwise dictionaries and
 
 Cutwise Constants data can be fetched by simple unauthorized HTTP GET request:
 
-```http
+```
 GET https://api.cutwise.com/v2/constants
 ```
 
