@@ -163,11 +163,11 @@ Initial sorting is made by creation date.
 
 If no diamonds matching filters then HTTP 204 response code will be return with no content.
 
-### Filtering
+### Filtration
 
 List filtered can be done by fields `id`, `sku`, `isColored`, `isPublished`, `date`.
 
-Filtering example:
+Filtration example:
 
 ```http
 GET /v3/diamond?f[id][]=1&f[id][]=2&f[sku][]=EJ50&f[sku][]=EJ51&f[dateFrom]=20050809T183142+0330&f[dateTo]=20150809T183142+0330 HTTP/1.1
@@ -189,36 +189,170 @@ Authorization: Bearer {CUTWISE_ACCESS_TOKEN}
 
 Total count of matching filters objects is returned in HTTP Response Header `X-Total-Count`.
 
-### Response Example
-
-TODO
-
-### Error Handling
-
-TODO
-
 ## Fetching Single Diamond
 
-TODO
+Single diamond can be fetched by Cutwise ProductID (field `id` from diamond object).
+To fetch diamond with ProductId=1234 make the following request:
 
-## Modifying Single Diamond
+```http
+GET /v3/diamond/1234 HTTP/1.1
+Host: api.cutwise.com
+Authorization: Bearer {CUTWISE_ACCESS_TOKEN}
+```
 
-TODO
+## Single Diamond Creation
 
-## Modifying Diamonds List
+On diamond creation Diamond object should be sent, except following fields:
 
-TODO
- max collection update is 500
+- `id`: will be created automatically by Cutwise Platform;
+- `date`: will be set automatically by Cutwise Platform;
+- `scores`: will be ready after scoring processing (may take up to 1 hour);
+- `_links`: virtual field;
 
-## Deleting Single Diamond
+Object should be sent in POST request payload encoded in JSON object.
 
-TODO
+```http
+POST /v3/diamond HTTP/1.1
+Host: api.cutwise.com
+Authorization: Bearer {CUTWISE_ACCESS_TOKEN}
+```
 
-## Deleting Diamonds List
+Payload:
 
-TODO
- max collection update is 500
+```json
+{
+  "sku": "RBC_Melee-6",
+  "price": null,
+  "isColored": false,
+  "isPublished": true,
+  "cutShape": 2,
+  "carat": 0.03
+}
+```
 
-## Example
+Diamond will be owned by user who requested provided Access Token
 
-TODO
+On success diamond object will be returned.
+
+## Bulk Diamonds Creation
+
+Requirements is the same as for single diamond, but object should in following structure:
+
+```http
+POST /v3/diamond/bulk HTTP/1.1
+Host: api.cutwise.com
+Authorization: Bearer {CUTWISE_ACCESS_TOKEN}
+```
+
+Payload:
+
+```json
+{
+  "entries": [{
+    "sku": "RBC_Melee-6",
+    "price": null,
+    "isColored": false,
+    "isPublished": true,
+    "cutShape": 2,
+    "carat": 0.03
+  },
+  {
+    "sku": "RBC_Melee-7",
+    "price": null,
+    "isColored": false,
+    "isPublished": true,
+    "cutShape": 4,
+    "carat": 0.025
+  }]
+}
+```
+
+On success list of diamond objects will be returned.
+
+Up to 500 entries can be sent in single request.
+
+## Single Diamond Modifying
+
+The same as a Creation request, but PUT or PATCH HTTP method should be used.
+
+Some fields can be ommited, it will not be changed in entity.
+
+To remove value provide `null`.
+
+```http
+PATCH /v3/diamond/{PRODUCT_ID} HTTP/1.1
+Host: api.cutwise.com
+Authorization: Bearer {CUTWISE_ACCESS_TOKEN}
+```
+
+Payload:
+
+```json
+{
+  "cutShape": 2,
+  "carat": 0.031,
+  "cutQuality": null
+}
+```
+
+On success diamond object will be returned.
+
+## Bulk Diamond Modifying
+
+The same as a Bulk Creation request, but PUT or PATCH HTTP method should be used and each object should contain `id` fields.
+
+```http
+PATCH /v3/diamond/bulk HTTP/1.1
+Host: api.cutwise.com
+Authorization: Bearer {CUTWISE_ACCESS_TOKEN}
+```
+
+Payload:
+
+```json
+{
+  "entries": [{
+    "id": {PRODUCT_ID_1},
+    "isPublished": false,
+    "cutShape": 2,
+    "carat": 0.032
+  },
+  {
+    "id": {PRODUCT_ID_2},
+    "isPublished": false
+  }]
+}
+```
+
+On success list of diamond objects will be returned.
+
+Up to 500 entries can be sent in single request.
+
+## Single Diamond Deleting
+
+```http
+DELETE /v3/diamond/{PRODUCT_ID} HTTP/1.1
+Host: api.cutwise.com
+Authorization: Bearer {CUTWISE_ACCESS_TOKEN}
+```
+
+## Bulk Diamond Deleting
+
+```http
+DELETE /v3/diamond/bulk HTTP/1.1
+Host: api.cutwise.com
+Authorization: Bearer {CUTWISE_ACCESS_TOKEN}
+```
+
+Payload:
+
+```json
+{
+  "entries": [{
+    "id": {PRODUCT_ID_1},
+  },
+  {
+    "id": {PRODUCT_ID_2},
+  }]
+}
+```
