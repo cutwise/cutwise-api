@@ -7,6 +7,7 @@ TODO
 - [Cutwise API Authentification](rest/auth.md)
 - [Constants API](rest/constants-api.md)
 - [Diamonds API](rest/diamonds-api.md)
+- [API Error Handling](rest/error-handling.md)
 - [Cutwise Optical Performance Scores](rest/scoring-scale.md)
 
 ## External Links
