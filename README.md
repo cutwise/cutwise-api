@@ -1,30 +1,17 @@
-# Cutwise Platform API (public)
+## Overview
 
-## Authentication
-Cutwuse requires users of the API to be authenticated before they can query most data.
+TODO
 
-## Working with Constants
+## API Docs
+
+- [Cutwise API Authentification](rest/auth.md)
 - [Constants API](rest/constants-api.md)
+- [Diamonds API](rest/diamonds-api.md)
+- [Cutwise Optical Performance Scores](rest/scoring-scale.md)
 
-## Diamond API
+## External Links
 
-## Metrics
-
-## Common Error Handling
-
-## Examples
-
-## Supported Public APIs
-- [Media Meta API](rest/media-meta.md)
-
-## Maintained changelogs:
-- [API Changelog](rest/changelog.md)
-
-## Links
-[Cutwise.com](https://cutwise.com)
-
-[Pricing](https://cutwise.com/pricing/)
-
-[About](https://octonus-teams.com/wiki/display/CUDO/About+Cutwise+Team)
-
-[Service Privacy agreement](https://cutwise.com/privacy)
+- [Cutwise.com](https://cutwise.com)
+- [Pricing](https://cutwise.com/pricing/)
+- [About](https://octonus-teams.com/wiki/display/CUDO/About+Cutwise+Team)
+- [Service Privacy agreement](https://cutwise.com/privacy)
