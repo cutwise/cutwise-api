@@ -2,3 +2,7 @@ title: Cutwise Platform API
 description: Public APIs
 show_downloads: false
 theme: minima
+google_analytics: UA-44038683-4
+header_pages:
+  - examples.md
+  - rest/changelog.md

@@ -1,4 +1,4 @@
-# Cutwise Change Log
+# CHANGELOG
 
 ## 4.1.0
 
