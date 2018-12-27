@@ -1,5 +1,4 @@
 title: Cutwise Platform API
 description: Public APIs
 show_downloads: false
-google_analytics:
-theme: jekyll-theme-dinky
+theme: minima
