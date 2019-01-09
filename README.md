@@ -8,22 +8,23 @@ This document describes the official Cutwise Platform REST API v2/v3. If you hav
 - [API Error Handling](rest/error-handling.md)
 - [Cutwise Optical Performance Scores](rest/scoring-scale.md)
 
-## REST API HTTP redirects
+## HTTP redirects
 
 API v3 uses HTTP redirection where appropriate. Clients should assume that any request may result in a redirection. Receiving an HTTP redirection is not an error and clients should follow that redirect. Redirect responses will have a Location header field which contains the URI of the resource to which the client should repeat the requests.
 
-|HTTP Code|Description|
-|-|-|-|-|
+|Status Code|Description|
+|-|-|
 |301|Permanent redirection. Indicates that the resource requested has been definitively moved to the URL given by the `Location` headers.|
 |302|Temporary redirection. Indicates that the resource requested has been temporarily moved to the URL given by the `Location` header.|
+
 Other redirection status codes may be used in accordance with the HTTP 1.1 spec.
 
-## REST API HTTP verbs
+## HTTP verbs
 
 Where possible, API v3 strives to use appropriate HTTP verbs for each action.
 
 |Verb|Description|
-|-|-|-|-|
+|-|-|
 |GET|Used for retrieving resources (single or collection).|
 |POST|Used for creating resources.|
 |PATCH|Used for updating resources with partial JSON data. For instance, an `Diamond` resource has `color` and `clarity` attributes. A PATCH request may accept one or more of the attributes to update the resource.|
