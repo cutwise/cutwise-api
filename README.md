@@ -1,6 +1,6 @@
 ## Overview
 
-This document describes the official Cutwise Platform REST API v2/v3. If you have any problems or requests, please feel free to contact [Cutwise Support](support@cutwise.com).
+This document describes the official Cutwise Platform REST API v2/v3. If you have any problems or requests, please feel free to contact [Cutwise Support](mailto:support@cutwise.com).
 
 - [Cutwise API Authentification](rest/auth.md)
 - [Constants API](rest/constants-api.md)
