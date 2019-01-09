@@ -6,7 +6,7 @@ const PASSWORD = ''; // Cutwise user password
 const CLIENT_ID = ''; // Client Application ID
 const CLIENT_SECRET = ''; // Client Application Secret
 
-fetch(`https://api-staging.cutwise.com/api/oauth/v2/token?grant_type=password&username=${USERNAME}&password=${PASSWORD}&client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`)
+fetch(`https://api.cutwise.com/api/oauth/v2/token?grant_type=password&username=${USERNAME}&password=${PASSWORD}&client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`)
   .then(res => {
     if (!res.ok) {
       throw new Error(res.statusText);
@@ -18,15 +18,33 @@ fetch(`https://api-staging.cutwise.com/api/oauth/v2/token?grant_type=password&us
   .then(authResponseAsJSON => {
     const accessToken = authResponseAsJSON.access_token;
 
-    fetch('https://api-staging.cutwise.com/v2/constants', {
+    const constantsPromise = fetch('https://api.cutwise.com/v2/constants', {
       headers: {
         Authorization: `Bearer ${accessToken}`
       }
-    })
-      .then(res => res.json())
-      .then(constantsResponseAsJSON => {
-        console.log(constantsResponseAsJSON.dict.clarity);
+    }).then(res => res.json());
+
+    const diamondsPromise = fetch('https://api.cutwise.com/api/v3/diamond?limit=8&offset=0', {
+      headers: {
+        Authorization: `Bearer ${accessToken}`
+      }
+    }).then(res => res.json());
+
+    Promise.all([constantsPromise, diamondsPromise]).then(([constants, diamonds]) => {
+      diamonds.forEach((diamond) => {
+        if (!diamond.cutShape) {
+          return;
+        }
+
+        const cutShape = constants.dict.cutShape.find(cutShape => cutShape.id === diamond.cutShape);
+
+        if (!cutShape) {
+          return;
+        }
+
+        console.log(cutShape);
       });
+    });
   })
   .catch(error => console.error('Error:', error));
 ```
