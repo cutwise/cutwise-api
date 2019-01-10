@@ -1,4 +1,10 @@
-# Examples
+## Example
+
+This example shows authentification flow and simple requests to Cutwise API. In the following piece of code you could see Promise chain resolved with `cutShape` of the first diamond in vendor inventory. You can get additional information here:
+
+- [Cutwise API Authentification](rest/auth.md)
+- [Constants API](rest/constants-api.md)
+- [Diamonds API](rest/diamonds-api.md)
 
 ```javascript
 const USERNAME = ''; // Cutwise user login, requests will be authentificated as provided user
@@ -30,7 +36,7 @@ fetch(`https://api.cutwise.com/api/oauth/v2/token?grant_type=password&username=$
       }
     }).then(res => res.json());
 
-    Promise.all([constantsPromise, diamondsPromise]).then(([constants, diamonds]) => {
+    return Promise.all([constantsPromise, diamondsPromise]).then(([constants, diamonds]) => {
       diamonds.forEach((diamond) => {
         if (!diamond.cutShape) {
           return;
@@ -43,6 +49,8 @@ fetch(`https://api.cutwise.com/api/oauth/v2/token?grant_type=password&username=$
         }
 
         console.log(cutShape);
+        
+        return cutShape;
       });
     });
   })
