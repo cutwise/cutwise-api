@@ -1,8 +1,8 @@
-# Error Handling
+## Error Handling
 
 Cutwise API standard HTTP Status Codes for its responses. You can find some additional information [here](https://tools.ietf.org/html/rfc7231)
 
-# Authentification Errors
+## Authentification Errors
 
 Response for incorrect authentification requests looks like this:
 
@@ -10,7 +10,7 @@ Response for incorrect authentification requests looks like this:
 {"error":"invalid_client","error_description":"The client credentials are invalid"}
 ```
 
-# Common Error Handling
+## Common Error Handling
 
 If something goes wrong you will receive response body with following structure:
 
