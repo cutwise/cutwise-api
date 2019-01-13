@@ -28,7 +28,7 @@ Where possible, API v3 strives to use appropriate HTTP verbs for each action.
 |GET|Used for retrieving resources (single or collection).|
 |POST|Used for creating resources.|
 |PATCH|Used for updating resources with partial JSON data. For instance, an `Diamond` resource has `color` and `clarity` attributes. A PATCH request may accept one or more of the attributes to update the resource.|
-|PUT|Synonym for `PATCH`, so some fields can be ommited and wouldn\t be updated.|
+|PUT|Synonym for `PATCH`, so some fields can be ommited and they wouldn't be updated.|
 |DELETE|Used for deleting resources.|
 
 ## Timezones
