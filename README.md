@@ -7,6 +7,7 @@ This document describes the official Cutwise Platform REST API v2/v3. If you hav
 - [Diamonds API](rest/diamonds-api.md)
 - [API Error Handling](rest/error-handling.md)
 - [Cutwise Optical Performance Scores](rest/scoring-scale.md)
+- [Examples](examples.md)
 
 ## HTTP redirects
 
