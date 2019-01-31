@@ -23,7 +23,7 @@ Iframe attributes `sandbox="allow-same-origin allow-scripts allow-presentation"`
 
 ## Requirements
 
-IFrame should not be smaller than 640px. Full widget view should be visible without iframe scroll.
+IFrame size (widget × height) should not be smaller than 480px × 640px. Full widget view should be visible without iframe scroll.
 
 List of fully supported browsers:
 
