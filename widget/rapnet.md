@@ -27,9 +27,9 @@ IFrame size (width × height) should not be smaller than 480px × 640px. Full wi
 
 List of fully supported browsers:
 
-- todo
-- todo
-- todo
-- todo
+- Firefox 56 and up;
+- Chrome 64 and up;
+- Edge 15 and up;
+- Safari 10.1 and up.
 
 The remaining browsers either have limited functionality or only the first frame of the video will be shown.
