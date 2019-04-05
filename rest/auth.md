@@ -39,7 +39,7 @@ Access Token (`access_token`) can be used in Bearer Authorization, Refresh Token
 Access Token can be refreshed by Refresh Token with following request:
 
 ```
-GET http://cutwise.local/api/oauth/v2/token?grant_type=refresh_token&refresh_token={REFRESH_TOKEN}&client_id={CUTWISE_CLIENT_ID}&client_secret={CUTWISE_CLIENT_SECRET}
+GET https://cutwise.com/api/oauth/v2/token?grant_type=refresh_token&refresh_token={REFRESH_TOKEN}&client_id={CUTWISE_CLIENT_ID}&client_secret={CUTWISE_CLIENT_SECRET}
 ```
 
 - `REFRESH_TOKEN` - Refresh Token, retrieved in fetching Access Token request or from another refresh token request;
