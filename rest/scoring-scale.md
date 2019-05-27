@@ -54,6 +54,23 @@ On the graphical representation of the scale, the grade marker should be 20% on 
 
 ⚠️ For positioning the Symmetry Score marker, the same scheme is used but instead of relative grade (`*.rg`) the absolute value (`* .val`) is used.
 
+## Spread scores
+
+```
+"spread": {
+  "ct": -0.19,
+  "pc": -14.2,
+  "d": 0.1,
+  "ver": "1.0.0"
+}
+```
+
+About Octonus Spread parameter please read https://www.octonus.com/oct/products/3dcalc/standard/param17.phtml.
+
+`spread.ct` — absolute spread (carats).
+`spread.pc` — relative spread (%).
+`d` is metric accuracy for `spread.pc`.
+
 ## Fluorescence Scores
 
 Fluorescence Scores values appears as a histogram values:
