@@ -34,7 +34,13 @@ Here is the example Diamond object fetched from Cutwise Diamonds API:
       "rg": 1.02,
       "d": 0.05,
       "ver": "1.1.0"
-    },
+    }
+    "spread": {
+	  	"ct": -0.19,
+  		"pc": -14.2,
+		  "d": 0.1,
+	  	"ver": "1.0.0"
+  	},
     "fire": {
       "val": 0.73,
       "rg": 1.02,
