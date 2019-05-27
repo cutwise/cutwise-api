@@ -65,7 +65,7 @@ On the graphical representation of the scale, the grade marker should be 20% on 
 }
 ```
 
-About Octonus Spread parameter please read https://www.octonus.com/oct/products/3dcalc/standard/param17.phtml .
+About Octonus Spread parameter please read [OctoNus spread & AGS spread](https://www.octonus.com/oct/products/3dcalc/standard/param17.phtml).
 
 `spread.ct` — absolute spread (carats).
 `spread.pc` — relative spread (%).
