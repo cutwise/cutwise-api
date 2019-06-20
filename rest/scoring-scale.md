@@ -36,6 +36,7 @@ The list of segment boundaries is defined in the [Constants API](constants-api.m
 ⚠️ Lower poor grade bound is always 0.
 
 ⚠️ Actually there is no upper limit for OU (grade Outstanding), the last scale value in the API (for example, 1.3 for Fire) is used just for the convenient normalization to the OU grade (so as not to normalize between 1 and infinity). If the grade value is greater than the upper segment, then we assume it to be equal to the OU segment boundary.
+⚠️ If metric point lies right on the grade delimiter then this point belongs to two grade at once.
 
 ## Example for Fire Score
 
