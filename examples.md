@@ -30,7 +30,7 @@ fetch(`https://api.cutwise.com/api/oauth/v2/token?grant_type=password&username=$
       }
     }).then(res => res.json());
 
-    const diamondsPromise = fetch('https://api.cutwise.com/api/v3/diamond?limit=8&offset=0', {
+    const diamondsPromise = fetch('https://api.cutwise.com/v3/diamond?limit=8&offset=0', {
       headers: {
         Authorization: `Bearer ${accessToken}`
       }
