@@ -90,14 +90,12 @@ Response returns in JSON array format, containing list of Diamond object (see Di
     "id": 31893,
     "sku": "RBC_Melee-6",
     "files": [ ... ],
-    "basisTransform": [ ... ],
     "date": "2014-11-27T21:11:00+00:00"
   },
   {
     "id": 31892,
     "sku": "RBC_Melee-9",
     "files": [ ... ],
-    "basisTransform": [ ... ],
     "date": "2014-11-27T21:13:00+00:00"
   },
   
