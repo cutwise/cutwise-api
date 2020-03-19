@@ -50,9 +50,9 @@ Here is the example of the single object fetched from Cutwise Plotting Package A
 			"url": "http://files-cdn.cutwise.com/img7.jpg"
 		}
 	],
-	"model" => {
-		"type" => "dmc",
-		"url" => "http://files-cdn.cutwise.com/model.dmc"
+	"model": {
+		"type": "dmc",
+		"url": "http://files-cdn.cutwise.com/model.dmc"
 	}
 	"date": "2014-11-27T21:11:00+00:00"
 }
