@@ -1,4 +1,6 @@
-# Plotting Package API v1
+![DRAFT](https://img.shields.io/badge/maturity-DRAFT-red.svg)
+
+# Plotting Package API v1 Proposal
 
 ## Overview
 
@@ -52,7 +54,7 @@ Here is the example of the single object fetched from Cutwise Plotting Package A
 }
 ```
 
-Fields description (`Constants` is a reference to Dictionaries from [Constants API](constants-api.md):
+### Fields description:
 
 |Field|Format|Description|
 |-|-|-|
