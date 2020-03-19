@@ -14,7 +14,7 @@ Here is the example of the single object fetched from Cutwise Plotting Package A
 {
 	"id": 337,
 	"sku": "MSSRBC13",
-	"files": [{
+	"media": [{
 			"lighting": "Darkfield ML",
 			"wireframe": false,
 			"url": "http://files-cdn.cutwise.com/img1.jpg"
@@ -50,6 +50,10 @@ Here is the example of the single object fetched from Cutwise Plotting Package A
 			"url": "http://files-cdn.cutwise.com/img7.jpg"
 		}
 	],
+	"model" => {
+		"type" => "dmc",
+		"url" => "http://files-cdn.cutwise.com/model.dmc"
+	}
 	"date": "2014-11-27T21:11:00+00:00"
 }
 ```
@@ -60,7 +64,8 @@ Here is the example of the single object fetched from Cutwise Plotting Package A
 |-|-|-|
 |id|int|Cutwise ProductID|
 |sku|string|Diamond SKU, provided by Client|
-|files|array|Package files for external plotting|
+|media|array|URL list of photos for external plotting|
+|model|array|3D Model URL|
 |date|string (ISO 8601)|Date and time of object creation on Cutwise Platform|
 
 ## Authorization
@@ -91,13 +96,15 @@ Response returns in JSON array format, containing list of Diamond object (see Di
   {
     "id": 31893,
     "sku": "RBC_Melee-6",
-    "files": [ ... ],
+    "media": [ ... ],
+    "model": { ... },
     "date": "2014-11-27T21:11:00+00:00"
   },
   {
     "id": 31892,
     "sku": "RBC_Melee-9",
-    "files": [ ... ],
+    "media": [ ... ],
+    "model": { ... },
     "date": "2014-11-27T21:13:00+00:00"
   },
   
