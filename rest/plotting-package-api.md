@@ -48,7 +48,6 @@ Here is the example of the single object fetched from Cutwise Plotting Package A
 			"url": "http://files-cdn.cutwise.com/img7.jpg"
 		}
 	],
-	"basisTransform": [0.999906, 0.012263, -0.006144, -0.006219, 0.012243, -0.999920, -0.003281, 0.002325, -0.006184, 0.003205, -0.999976, 0.000000, 0.000000, 0.000000, 0.000000, 0.005113],
 	"date": "2014-11-27T21:11:00+00:00"
 }
 ```
@@ -60,7 +59,6 @@ Fields description (`Constants` is a reference to Dictionaries from [Constants A
 |id|int|Cutwise ProductID|
 |sku|string|Diamond SKU, provided by Client|
 |files|array|Package files for external plotting|
-|basisTransform|array|Basis transformation matrix|
 |date|string (ISO 8601)|Date and time of object creation on Cutwise Platform|
 
 ## Authorization
