@@ -110,7 +110,7 @@ Request example:
 ```http
 GET /v3/diamond/1234 HTTP/1.1
 Host: api.cutwise.com
-Authorization: Bearer YzU5NDczNTMwMDY2YWY1ZjM5YmViNGJlMTU2ZmI2YjZmNjJjYjE0Y2Y5MmVhNmEyNzIxY2IxMzk1N2EzNWYyMw
+Authorization: Bearer {CUTWISE_ACCESS_TOKEN}
 ```
 
 ## Diamonds List Request

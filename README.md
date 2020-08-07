@@ -4,7 +4,9 @@ This document describes the official Cutwise Platform REST API v2/v3. If you hav
 
 - [Cutwise API Authentification](rest/auth.md)
 - [Constants API](rest/constants-api.md)
-- [Diamonds API](rest/diamonds-api.md)
+- [Diamonds API V3](rest/diamonds-api-v3.md)
+- [Diamonds API V4](rest/diamonds-api-v4.md)
+- [Certifications API V4](rest/certifications-api-v4.md)
 - [API Error Handling](rest/error-handling.md)
 - [Cutwise Optical Performance Scores](rest/scoring-scale.md)
 - [Examples](examples.md)

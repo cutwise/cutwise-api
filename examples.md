@@ -4,7 +4,8 @@ This example shows authentification flow and simple requests to Cutwise API. In 
 
 - [Cutwise API Authentification](rest/auth.md)
 - [Constants API](rest/constants-api.md)
-- [Diamonds API](rest/diamonds-api.md)
+- [Diamonds API V3](rest/diamonds-api-v3.md)
+- [Diamonds API V4](rest/diamonds-api-v4.md)
 
 ```javascript
 const USERNAME = ''; // Cutwise user login, requests will be authentificated as provided user
@@ -12,47 +13,34 @@ const PASSWORD = ''; // Cutwise user password
 const CLIENT_ID = ''; // Client Application ID
 const CLIENT_SECRET = ''; // Client Application Secret
 
-fetch(`https://api.cutwise.com/api/oauth/v2/token?grant_type=password&username=${USERNAME}&password=${PASSWORD}&client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`)
-  .then(res => {
-    if (!res.ok) {
-      throw new Error(res.statusText);
+(async () => {
+  const authRes = await fetch(`https://api.cutwise.com/api/oauth/v2/token?grant_type=password&username=${USERNAME}&password=${PASSWORD}&client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`);
+  const authResponseAsJSON = await authRes.json();
+
+  const accessToken = authResponseAsJSON.access_token;
+  const requestParams = {
+    headers: { Authorization: `Bearer ${accessToken}` },
+  };
+
+  const constantsPromise = fetch('https://api.cutwise.com/v2/constants/web', requestParams);
+  const diamondsPromise = fetch('https://api.cutwise.com/v3/diamond?limit=8&offset=0', requestParams);
+
+  const [constantsRes, diamondsRes] = await Promise.all([constantsPromise, diamondsPromise]);
+  const constants = await constantsRes.json();
+  const diamonds = await diamondsRes.json();
+
+  diamonds.forEach((diamond) => {
+    if (!diamond.cutShape) {
+      return;
     }
 
-    return res;
-  })
-  .then(res => res.json())
-  .then(authResponseAsJSON => {
-    const accessToken = authResponseAsJSON.access_token;
+    const cutShape = constants.dict.cutShape.find(cs => cs.id === diamond.cutShape);
 
-    const constantsPromise = fetch('https://api.cutwise.com/v2/constants', {
-      headers: {
-        Authorization: `Bearer ${accessToken}`
-      }
-    }).then(res => res.json());
+    if (!cutShape) {
+      return;
+    }
 
-    const diamondsPromise = fetch('https://api.cutwise.com/v3/diamond?limit=8&offset=0', {
-      headers: {
-        Authorization: `Bearer ${accessToken}`
-      }
-    }).then(res => res.json());
-
-    return Promise.all([constantsPromise, diamondsPromise]).then(([constants, diamonds]) => {
-      diamonds.forEach((diamond) => {
-        if (!diamond.cutShape) {
-          return;
-        }
-
-        const cutShape = constants.dict.cutShape.find(cutShape => cutShape.id === diamond.cutShape);
-
-        if (!cutShape) {
-          return;
-        }
-
-        console.log(cutShape);
-        
-        return cutShape;
-      });
-    });
-  })
-  .catch(error => console.error('Error:', error));
+    console.log(cutShape);
+  });
+})();
 ```
