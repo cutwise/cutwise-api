@@ -15,30 +15,45 @@ const CLIENT_ID = ''; // Client Application ID
 const CLIENT_SECRET = ''; // Client Application Secret
 
 (async () => {
-  const authRes = await fetch(`https://api.cutwise.com/api/oauth/v2/token?grant_type=password&username=${USERNAME}&password=${PASSWORD}&client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`);
-  const authResponseAsJSON = await authRes.json();
+  const authResp = await fetch(`https://cutwise.com/api/oauth/v2/token?grant_type=password&username=${USERNAME}&password=${PASSWORD}&client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`);
+  const authRespAsJSON = await authResp.json();
 
-  const accessToken = authResponseAsJSON.access_token;
+  if (!authResp.ok) {
+    console.error(authRespAsJSON.error);
+    return;
+  }
+
+  const accessToken = authRespAsJSON.access_token;
   const requestParams = {
-    headers: { 
+    headers: {
       Authorization: `Bearer ${accessToken}`,
-      'Content-Type': 'application/json', 
+      'Content-Type': 'application/json',
     },
   };
 
   const constantsPromise = fetch('https://api.cutwise.com/v2/constants/web', requestParams);
   const diamondsPromise = fetch('https://api.cutwise.com/v3/diamond?limit=8&offset=0', requestParams);
 
-  const [constantsRes, diamondsRes] = await Promise.all([constantsPromise, diamondsPromise]);
-  const constants = await constantsRes.json();
-  const diamonds = await diamondsRes.json();
+  const [constantsResp, diamondsResp] = await Promise.all([constantsPromise, diamondsPromise]);
+  const constantsRespAsJSON = await constantsResp.json();
+  const diamondsRespAsJSON = await diamondsResp.json();
 
-  diamonds.forEach((diamond) => {
+  if (!constantsResp.ok) {
+    console.error(constantsRespAsJSON.error);
+    return;
+  }
+
+  if (!diamondsResp.ok) {
+    console.error(diamondsRespAsJSON.error);
+    return;
+  }
+
+  diamondsRespAsJSON.forEach((diamond) => {
     if (!diamond.cutShape) {
       return;
     }
 
-    const cutShape = constants.dict.cutShape.find(cs => cs.id === diamond.cutShape);
+    const cutShape = constantsRespAsJSON.dict.cutShape.find(cs => cs.id === diamond.cutShape);
 
     if (!cutShape) {
       return;
@@ -62,10 +77,15 @@ const CLIENT_ID = ''; // Client Application ID
 const CLIENT_SECRET = ''; // Client Application Secret
 
 (async () => {
-  const authRes = await fetch(`https://api.cutwise.com/api/oauth/v2/token?grant_type=password&username=${USERNAME}&password=${PASSWORD}&client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`);
-  const authResponseAsJSON = await authRes.json();
+  const authRes = await fetch(`https://cutwise.com/api/oauth/v2/token?grant_type=password&username=${USERNAME}&password=${PASSWORD}&client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`);
+  const authRespAsJSON = await authRes.json();
 
-  const accessToken = authResponseAsJSON.access_token;
+  if (!authRes.ok) {
+    console.error(authRespAsJSON.error);
+    return;
+  }
+
+  const accessToken = authRespAsJSON.access_token;
   const requestHeaders = {
     'Content-Type': 'application/json',
     Authorization: `Bearer ${accessToken}`,
@@ -86,20 +106,33 @@ const CLIENT_SECRET = ''; // Client Application Secret
     headers: requestHeaders,
   });
 
-  const diamond = await diamondResp.json();
+  const diamondAsJSON = await diamondResp.json();
+
+  if (!diamondResp.ok) {
+    console.error(diamondAsJSON.error[0]);
+    return;
+  }
 
   const certificationCreateResp = await fetch('https://api.cutwise.com/v4/certification', {
     method: 'POST',
     body: JSON.stringify({
       laboratory: 'GCAL',
       number: '33188',
-      product: diamond.id,
+      product: diamondResp.id,
     }),
     headers: requestHeaders,
   });
 
-  const certification = await certificationCreateResp.json();
+  const certificationCreateRespAsJSON = await certificationCreateResp.json();
 
-  console.log(`Certification with id ${certification.id} has been created and linked to the diamond`);
+  if (!certificationCreateResp.ok) {
+    console.error(certificationCreateRespAsJSON.error[0]);
+    return;
+  }
+
+  console.log(`Certification with id ${certificationCreateRespAsJSON.id} has been created and linked to the diamond`);
 })();
 ```
+
+
+
