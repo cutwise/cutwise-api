@@ -92,8 +92,8 @@ Here is the example Diamond object fetched from Cutwise Diamonds API:
 
 Fields description:
 
-|Field|FormatDescription|
-|-|-|-|-|  
+|Field|Format|Description|
+|-|-|-|  
 |id|int|Cutwise ProductID|
 |sku|string|Diamond SKU, provided by Client|
 |price|float\|int\|null|Diamond price, `null` if not set|

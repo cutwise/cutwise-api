@@ -20,8 +20,8 @@ Here is the example Certification object fetched from Cutwise Certification API:
 
 Fields description:
 
-|Field|FormatDescription|
-|-|-|-|-|  
+|Field|Format|Description|
+|-|-|-|
 |id|int|Cutwise CertificationID|
 |laboratory|string|Certification Laboratory|
 |number|string|Certification Number|
