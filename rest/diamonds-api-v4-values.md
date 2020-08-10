@@ -16,6 +16,7 @@ This page is a reference to the values you can use in Diamond V4 API.
 - Heart = H, HS, HT, MHRC
 - Oval = O, OV, OMB
 - Radiant= R, RAD, RA, RC, RDN, CRB, RCRB
+* Not listed values are also supported. You can see such diamonds in ["Other" section](https://cutwise.com/catalog/diamond-colorless?f[h][]=113) in Cutwise Platform 
 
 ### clarity
 FL, IF, VVS1, VVS2, VS1, VS2, SI1, SI2, SI3, I1, P1

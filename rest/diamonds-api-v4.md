@@ -242,7 +242,6 @@ Payload:
   "sku": "RBC_Melee-6",
   "price": null,
   "isColored": false,
-  "isPublished": true,
   "cutShape": 2,
   "carat": 0.03
 }
@@ -272,7 +271,6 @@ Payload:
     "sku": "RBC_Melee-6",
     "price": null,
     "isColored": false,
-    "isPublished": true,
     "cutShape": 2,
     "carat": 0.03
   },
@@ -280,7 +278,6 @@ Payload:
     "sku": "RBC_Melee-7",
     "price": null,
     "isColored": false,
-    "isPublished": true,
     "cutShape": 4,
     "carat": 0.025
   }]
@@ -332,12 +329,11 @@ Payload:
 {
   "entries": [{
     "id": {PRODUCT_ID_1},
-    "isPublished": false,
     "carat": 0.032
   },
   {
     "id": {PRODUCT_ID_2},
-    "isPublished": false
+    "carat": 0.55
   }]
 }
 ```
