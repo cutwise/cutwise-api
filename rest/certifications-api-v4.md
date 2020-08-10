@@ -13,8 +13,8 @@ Here is the example Certification object fetched from Cutwise Certification API:
   "id": 330,
   "laboratory": "GIA",
   "number": "33188",
-  "url": "http://www.gia.edu/cs/Satellite?pagename=GST%2FDispatcher&childpagename=GIA%2FPage%2FReportCheck&c=Page&cid=1355954554547&reportno=33188",
-  "file": "https://cutwise-test.s3.amazonaws.com/StoneCertificates/337/uploded_file.pdf"
+  "url": "https://www.gia.edu/report-check?reportno=2136273512",
+  "file": "https://d1d7qk4j7uzdqw.cloudfront.net/StoneCertificates/333/2136273512.pdf"
 }
 ```
 
