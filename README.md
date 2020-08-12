@@ -1,6 +1,6 @@
 ## Overview
 
-This document describes the official Cutwise Platform REST API v2/v3. If you have any problems or requests, please feel free to contact [Cutwise Support](mailto:support@cutwise.com).
+This document describes the official Cutwise Platform REST API. If you have any problems or requests, please feel free to contact [Cutwise Support](mailto:support@cutwise.com).
 
 Common APIs:
 - [Cutwise API Authentification](rest/auth.md)
@@ -20,7 +20,7 @@ Mode info:
 
 ## HTTP redirects
 
-API v3 uses HTTP redirection where appropriate. Clients should assume that any request may result in a redirection. Receiving an HTTP redirection is not an error and clients should follow that redirect. Redirect responses will have a Location header field which contains the URI of the resource to which the client should repeat the requests.
+API v3 and v4 use HTTP redirection where appropriate. Clients should assume that any request may result in a redirection. Receiving an HTTP redirection is not an error and clients should follow that redirect. Redirect responses will have a Location header field which contains the URI of the resource to which the client should repeat the requests.
 
 |Status Code|Description|
 |-|-|
