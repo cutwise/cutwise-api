@@ -118,6 +118,8 @@ Fields description:
 |scores|object|Cutwise Optical Performance Scores. [Learn more](scoring-scale.md)|
 |_links|object|HATEOAS Links to Cutwise Platform representations|
 
+Accepted values for diamond fields are described on the [Accepted Values page](diamonds-api-v4-values.md).
+
 ## Authorization
 
 All HTTP requests to Diamonds API should be authorized by OAuth HTTP Bearer Tokens (see [Cutwise Authorization](auth.md)).
