@@ -24,7 +24,7 @@ FL, IF, VVS1, VVS2, VS1, VS2, SI1, SI2, SI3, I1, P1
 
 ### color
 D, E, F, G, H, I, J, K, L, M, N, O,P, Q, R, S, T, U, V, W, X, Y, Z
-* For fancy colors use the fancy color column.
+* For fancy colors use the fancyGrade, colorHue and colorModifier fields. 
 
 ### cutQuality
 - I = Ideal, ID
