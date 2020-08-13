@@ -11,6 +11,7 @@ Diamonds API V3 uses dictionaries for managing diamond values:
 
 Diamonds API V4 uses string values for diamond data:
 - [Diamonds API V4](rest/diamonds-api-v4.md)
+- [Accepted values API V4](rest/diamonds-api-v4-values.md)
 - [Certifications API V4](rest/certifications-api-v4.md)
 
 Mode info:
