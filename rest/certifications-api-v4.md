@@ -44,10 +44,14 @@ All HTTP requests to Certification API should be authorized by OAuth HTTP Bearer
 
 ## Single Certification Creation
 
-On certification creation Certification object should be sent, except following fields:
+Certification creation request parameters:
 
-- `id`: will be created automatically by Cutwise Platform;
-- `url`: will be created automatically by Cutwise Platform;
+|Field|Format|Description|
+|-|-|-|
+|product|int (required)|Product to link with|
+|laboratory|string (required)|Certification Laboratory|
+|number|string|Certification Number|
+|file|string|Certification File as binary content|
 
 Object should be sent as "multipart/form-data" request.
 Request example:
