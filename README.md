@@ -51,6 +51,5 @@ These timestamps look something like 2014-02-27T15:05:06+01:00.
 ## External Links
 
 - [Cutwise.com](https://cutwise.com)
-- [Pricing](https://cutwise.com/pricing/)
 - [About](https://octonus-teams.com/wiki/display/CUDO/About+Cutwise+Team)
 - [Service Privacy agreement](https://cutwise.com/privacy)
