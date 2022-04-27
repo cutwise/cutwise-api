@@ -76,9 +76,9 @@ About Octonus Spread parameter please read [OctoNus spread & AGS spread](https:/
 
 Fluorescence Scores values appears as a histogram values:
 
-![Fig.1](img/score-fluor-1.png)
+![Fig.1](img/score-fluor-3.png)
 
-The values lie in the range `[0;1]`, where 1 is the maximum value (100%).
+The values lies in the range `[0;1]`, where 1 is the maximum value (100%).
 
 Fluorescence Score can be depicted as a vertical bar chart:
 
@@ -91,3 +91,5 @@ Histogram dimensions:
 - `score.n` — grade None (NON);
 - `score.s` — grade Strong (STR);
 - `score.vs` — grade Very Strong (V STR);
+
+`score.colorCode` is a Face-Up Fluorescence color code described in [Diamond API v4 Accepted Values](diamonds-api-v4-values.md#fluorcolor)
