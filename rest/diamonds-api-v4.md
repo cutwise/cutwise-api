@@ -73,6 +73,8 @@ Here is the example Diamond object fetched from Cutwise Diamonds API:
       "m": 0,
       "s": 0,
       "vs": 0,
+      "color": 4,
+      "colorCode": "B",
       "ver": "5.4.2018-06-29-770653064"
     },
     "symmetry": {
