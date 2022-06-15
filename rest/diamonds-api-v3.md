@@ -72,62 +72,62 @@ Here is the example Diamond object fetched from Cutwise Diamonds API:
     }
   },
   "scoresNormalized": {
-      "integral": {
-          "val": {
-              "abs": 0.78,
-              "val": 0.81,
-              "d": 0.03
-          },
-          "ag": [
-              "G",
-              "VG"
-          ],
-          "hr": "G-VG"
+    "integral": {
+      "val": {
+        "abs": 0.78,
+        "val": 0.81,
+        "d": 0.03
       },
-      "fire": {
-          "val": {
-              "abs": 0.54,
-              "val": 0.67,
-              "d": 0.05
-          },
-          "ag": [
-              "G",
-              "VG"
-          ],
-          "hr": "G-VG"
+      "ag": [
+        "G",
+        "VG"
+      ],
+      "hr": "G-VG"
+    },
+    "fire": {
+      "val": {
+        "abs": 0.54,
+        "val": 0.67,
+        "d": 0.05
       },
-      "brilliance": {
-          "val": {
-              "abs": 0.82,
-              "val": 0.82,
-              "d": 0.01
-          },
-          "ag": [
-              "G"
-          ],
-          "hr": "G"
+      "ag": [
+        "G",
+        "VG"
+      ],
+      "hr": "G-VG"
+    },
+    "brilliance": {
+      "val": {
+        "abs": 0.82,
+        "val": 0.82,
+        "d": 0.01
       },
-      "spread": {
-          "val": {
-              "abs": 0.1,
-              "val": 13,
-              "d": 0
-          },
-          "ag": [],
-          "hr": ""
+      "ag": [
+        "G"
+      ],
+      "hr": "G"
+    },
+    "spread": {
+      "val": {
+        "abs": 0.1,
+        "val": 13,
+        "d": 0
       },
-      "symmetry": {
-          "val": {
-              "abs": 5.84,
-              "val": 5.84,
-              "d": 0.3
-          },
-          "ag": [
-              "G",
-              "VG"
-          ],
-          "hr": "G-VG"
-      }
+      "ag": [],
+      "hr": ""
+    },
+    "symmetry": {
+      "val": {
+        "abs": 5.84,
+        "val": 5.84,
+        "d": 0.3
+      },
+      "ag": [
+        "G",
+        "VG"
+      ],
+      "hr": "G-VG"
+    }
   }, 
   "_links": [{
     "rel": "page.report",
