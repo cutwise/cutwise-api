@@ -71,64 +71,6 @@ Here is the example Diamond object fetched from Cutwise Diamonds API:
       "ver": "1.3.0"
     }
   },
-  "scoresNormalized": {
-    "integral": {
-      "val": {
-        "abs": 0.78,
-        "val": 0.81,
-        "d": 0.03
-      },
-      "ag": [
-        "G",
-        "VG"
-      ],
-      "hr": "G-VG"
-    },
-    "fire": {
-      "val": {
-        "abs": 0.54,
-        "val": 0.67,
-        "d": 0.05
-      },
-      "ag": [
-        "G",
-        "VG"
-      ],
-      "hr": "G-VG"
-    },
-    "brilliance": {
-      "val": {
-        "abs": 0.82,
-        "val": 0.82,
-        "d": 0.01
-      },
-      "ag": [
-        "G"
-      ],
-      "hr": "G"
-    },
-    "spread": {
-      "val": {
-        "abs": 0.1,
-        "val": 13,
-        "d": 0
-      },
-      "ag": [],
-      "hr": ""
-    },
-    "symmetry": {
-      "val": {
-        "abs": 5.84,
-        "val": 5.84,
-        "d": 0.3
-      },
-      "ag": [
-        "G",
-        "VG"
-      ],
-      "hr": "G-VG"
-    }
-  }, 
   "_links": [{
     "rel": "page.report",
     "href": "https:\/\/cutwise.com\/diamond\/337"
@@ -158,7 +100,6 @@ Fields description (`Constants` is a reference to Dictionaries from [Constants A
 |colorModifier|int|`dict.colorModifier`|Fancy coloured diamond colour modifier|
 |date|string (ISO 8601)|—|Date and time of object creation on Cutwise Platform|
 |scores|object|—|Cutwise Optical Performance Scores. [Learn more](scoring-scale.md)|
-|scoresNormalized|object|—|Cutwise normalized Optical Performance Scores.|
 |_links|object|—|HATEOAS Links to Cutwise Platform representations|
 
 ## Authorization
