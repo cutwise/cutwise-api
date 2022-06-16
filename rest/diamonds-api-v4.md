@@ -85,64 +85,6 @@ Here is the example Diamond object fetched from Cutwise Diamonds API:
       "ver": "1.3.0"
     }
   },
-  "scoresNormalized": {
-    "integral": {
-      "val": {
-        "abs": 0.78,
-        "val": 0.81,
-        "d": 0.03
-      },
-      "ag": [
-        "G",
-        "VG"
-      ],
-      "hr": "G-VG"
-    },
-    "fire": {
-      "val": {
-        "abs": 0.54,
-        "val": 0.67,
-        "d": 0.05
-      },
-      "ag": [
-        "G",
-        "VG"
-      ],
-      "hr": "G-VG"
-    },
-    "brilliance": {
-      "val": {
-        "abs": 0.82,
-        "val": 0.82,
-        "d": 0.01
-      },
-      "ag": [
-        "G"
-      ],
-      "hr": "G"
-    },
-    "spread": {
-      "val": {
-        "abs": 0.1,
-        "val": 13,
-        "d": 0
-      },
-      "ag": [],
-      "hr": ""
-    },
-    "symmetry": {
-      "val": {
-        "abs": 5.84,
-        "val": 5.84,
-        "d": 0.3
-      },
-      "ag": [
-        "G",
-        "VG"
-      ],
-      "hr": "G-VG"
-    }
-  },
   "_links": [{
     "rel": "page.report",
     "href": "https:\/\/cutwise.com\/diamond\/337"
@@ -176,7 +118,6 @@ Fields description:
 |visibility|string("noaccess"|"widget"|"search"|"full")|Diamond visibility in Cutwise web interface. [Learn more](https://octonus-teams.com/wiki/display/CUDO/Cutwise+Stock+Management+Documentation)|
 |certifications|Certification[]|Certifications array list. [Learn more](certifications-api-v4.md)|
 |scores|object|Cutwise Optical Performance Scores. [Learn more](scoring-scale.md)|
-|scoresNormalized|object|Cutwise Normalized Optical Performance Scores.|
 |_links|object|HATEOAS Links to Cutwise Platform representations|
 
 Accepted values for diamond fields are described on the [Accepted Values page](diamonds-api-v4-values.md).
