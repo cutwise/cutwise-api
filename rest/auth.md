@@ -12,7 +12,7 @@ See [Password Grant](https://www.oauth.com/oauth2-servers/access-tokens/password
 See [RFC 6749, section 1.3.3](https://tools.ietf.org/html/rfc6749#section-1.3.3) (oauth.com).
 
 ```
-GET https://cutwise.com/api/oauth/v2/token?grant_type=password&username={CUTWISE_LOGIN}&password={CUTWISE_PASSWORD}&client_id={CUTWISE_CLIENT_ID}&client_secret={CUTWISE_CLIENT_SECRET}
+POST https://cutwise.com/api/oauth/v2/token?grant_type=password&username={CUTWISE_LOGIN}&password={CUTWISE_PASSWORD}&client_id={CUTWISE_CLIENT_ID}&client_secret={CUTWISE_CLIENT_SECRET}
 ```
 
 - `CUTWISE_LOGIN` - Cutwise user login, requests will be authentificated as provided user;
@@ -39,7 +39,7 @@ Access Token (`access_token`) can be used in Bearer Authorization, Refresh Token
 Access Token can be refreshed by Refresh Token with following request:
 
 ```
-GET https://cutwise.com/api/oauth/v2/token?grant_type=refresh_token&refresh_token={REFRESH_TOKEN}&client_id={CUTWISE_CLIENT_ID}&client_secret={CUTWISE_CLIENT_SECRET}
+POST https://cutwise.com/api/oauth/v2/token?grant_type=refresh_token&refresh_token={REFRESH_TOKEN}&client_id={CUTWISE_CLIENT_ID}&client_secret={CUTWISE_CLIENT_SECRET}
 ```
 
 - `REFRESH_TOKEN` - Refresh Token, retrieved in fetching Access Token request or from another refresh token request;
