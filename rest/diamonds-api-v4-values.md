@@ -112,3 +112,14 @@ Brownish, Brown, Grayish, Gray, Greenish, Pinkish, Grayish Brownish, Purplish, Y
 - Very Thin = VTN, VTHN, VTHIN, VN
 - Extremely Thin = XTN, XTHN, EXTN, ETN, EN, XN
 * You may enter both Girdle Thin and Girdle Thick in this field, separate with a hyphen. Example: thn-thk
+
+### access
+- 0 = Restricted
+- 1 = Unlisted
+- 2 = Public
+
+### dataAccess
+- 0 = Hide All Design Data 
+- 1 = Hide Model And Reports
+- 2 = Show All Data
+
