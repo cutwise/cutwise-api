@@ -30,7 +30,8 @@ Here is the example Diamond object fetched from Cutwise Diamonds API:
   "culetSize":"N",
   "girdle":"Thin-Medium",
   "date":"2014-11-27T21:11:00+00:00",
-  "visibility":"full",
+  "access": 1,
+  "dataAccess": 0,
   "certifications": [
     {
       "id": 330,
@@ -115,7 +116,8 @@ Fields description:
 |culetSize|string|Diamond culet size grade|
 |girdle|string|Diamond girdle grade|
 |date|string (ISO 8601)|Date and time of object creation on Cutwise Platform|
-|visibility|string("noaccess"|"widget"|"search"|"full")|Diamond visibility in Cutwise web interface. [Learn more](https://octonus-teams.com/wiki/display/CUDO/Cutwise+Stock+Management+Documentation)|
+|access|int|Cutwise General Share Access|
+|dataAccess|int|Cutwise Cut Data Access|
 |certifications|Certification[]|Certifications array list. [Learn more](certifications-api-v4.md)|
 |scores|object|Cutwise Optical Performance Scores. [Learn more](scoring-scale.md)|
 |_links|object|HATEOAS Links to Cutwise Platform representations|
