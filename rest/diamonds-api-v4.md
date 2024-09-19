@@ -116,8 +116,8 @@ Fields description:
 |culetSize|string|Diamond culet size grade|
 |girdle|string|Diamond girdle grade|
 |date|string (ISO 8601)|Date and time of object creation on Cutwise Platform|
-|access|int|Cutwise General Share Access|
-|dataAccess|int|Cutwise Cut Data Access|
+|access|int|Cutwise General Share Access [Learn more](https://octonus-teams.com/wiki/pages/viewpage.action?pageId=106629838)|
+|dataAccess|int|Cutwise Cut Data Access [Learn more](https://octonus-teams.com/wiki/pages/viewpage.action?pageId=106629838)|
 |certifications|Certification[]|Certifications array list. [Learn more](certifications-api-v4.md)|
 |scores|object|Cutwise Optical Performance Scores. [Learn more](scoring-scale.md)|
 |_links|object|HATEOAS Links to Cutwise Platform representations|
