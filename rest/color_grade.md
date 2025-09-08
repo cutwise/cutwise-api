@@ -17,7 +17,7 @@ The following fields are used to describe the color:
 The diagrams below illustrate the positions of exact Munsell coordinates and their nearest tabular chip.  
 
 <p align="center">
-  <img src="rest/img/hvc.png" alt="HVC" width="45%"/>
-  <img src="rest/img/nearest_hvc.png" alt="nearestHVC" width="45%"/>
+  <img src="img/hvc.png" alt="HVC" width="45%"/>
+  <img src="img/nearest_hvc.png" alt="nearestHVC" width="45%"/>
 </p>
 
