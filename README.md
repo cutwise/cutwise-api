@@ -16,6 +16,7 @@ Diamonds API V4 uses string values for diamond data:
 
 Mode info:
 - [API Error Handling](rest/error-handling.md)
+- [Cutwise Fancy Color Grades](rest/color_grade.md) 
 - [Cutwise Optical Performance Scores](rest/scoring-scale.md)
 - [Examples](examples.md)
 
